@@ -1,0 +1,46 @@
+.tb-rate {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.tb-rate-select {
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #040505;
+    color: white;
+    padding: 12px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+.tb-rate-select:hover {
+    background-color: rgb(179, 0, 0);
+}
+.tb-rate-option {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    cursor: pointer;
+    padding: 30px;
+}
+.tb-rate-option:hover {
+    background-color: rgb(179, 0, 0);
+}
+.button {
+    width: 100px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #080808;
+    border: solid 1px transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(179, 0, 0);
+    border-color: rgb(0, 0, 0);
+}

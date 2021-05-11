@@ -1,0 +1,29 @@
+.contour {
+    background-color: black;
+    color: white;
+    list-style-type: none;
+    width: 310px;
+    height: 680px;
+    text-align: center;
+    margin: 20px;
+    padding: 30px;
+}
+.tb-cover {
+    width: 300px;
+    height:400px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.tb-item-details {
+    text-align: left;
+    font-size: 1em;
+}
+.tb-item-title
+{
+    font-weight: bold;
+    font-size: 1.25em;
+}
+.tb-item-title-value{
+    font-size: 0.9em;
+     font-weight: normal;
+}

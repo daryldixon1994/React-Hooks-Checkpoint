@@ -1,0 +1,19 @@
+.tb-header {
+    border-bottom: 4px black solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(7, 7, 7, 0.938);
+    color: white;
+    padding: 30px;
+}
+.tb-logo {
+    margin: 20px;
+    width: 100px;
+}
+.tb-banner {
+    display: flex;
+    align-items: center;
+}
+

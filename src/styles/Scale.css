@@ -1,0 +1,9 @@
+.tb-scale{
+    display: flex;
+    align-items: center;
+}
+.tb-rate-value{
+    margin-left: 10px;
+    font-size: 1.25em;
+    font-weight: bold;
+}
