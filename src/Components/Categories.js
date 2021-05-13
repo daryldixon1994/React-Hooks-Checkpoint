@@ -1,7 +1,6 @@
 import "../styles/Categories.css";
 
 function Categories({ filter, setFilter, categories }) {
-    
     return (
         <div className="tb-categorie">
             <div>

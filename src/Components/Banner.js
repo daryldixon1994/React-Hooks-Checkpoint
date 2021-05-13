@@ -1,8 +1,8 @@
 import "../styles/Banner.css";
-import logo from "../RS/logo.png"; 
+import logo from "../RS/logo.png";
 import Search from "../Components/Search";
 
-function Banner({updateAdd, updateSearch}) {
+function Banner({ updateAdd, updateSearch }) {
     return (
         <div className="tb-header">
             <div className="tb-banner">
@@ -13,7 +13,6 @@ function Banner({updateAdd, updateSearch}) {
                 </h1>
             </div>
             <Search updateSearch={updateSearch} />
-            
         </div>
     );
 }

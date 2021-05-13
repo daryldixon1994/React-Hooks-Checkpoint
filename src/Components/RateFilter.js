@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/RateFilter.css"
+import "../styles/RateFilter.css";
 function RateFilter({ rateFilter, setRateFilter }) {
     const tabRate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     return (

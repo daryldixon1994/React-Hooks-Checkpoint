@@ -9,8 +9,15 @@ function AddMovie({ updateAdd, addMovie }) {
     const [cast, setCast] = useState("");
     const [release, setRelease] = useState("");
 
-    function handelBlur() {
-        return title === "" ? alert("Please put a valid Title") : null;
+    function checkInput(e) {
+        return title === "" ||
+            category === "" ||
+            rate === "" ||
+            cover === "" ||
+            cast === "" ||
+            release === ""
+            ? alert("One or more missing datas")
+            : handelSubmit(e);
     }
 
     const handelSubmit = (e) => {
@@ -51,7 +58,7 @@ function AddMovie({ updateAdd, addMovie }) {
                             placeholder="Movie Name..."
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
-                            onBlur={handelBlur}
+                            /* onBlur={handelBlur}> */
                         />
                         <label>Category</label>
                         <input
@@ -95,7 +102,7 @@ function AddMovie({ updateAdd, addMovie }) {
                 <div>
                     <button
                         className="tb-bt-add-submit"
-                        onClick={(e) => handelSubmit(e)}
+                        onClick={(e) => checkInput(e)}
                     >
                         Submit
                     </button>

@@ -1,10 +1,12 @@
 import MovieItem from "./MovieItem";
 /* import Categories from "../Components/Categories";
- */ 
+ */
 import "../styles/MoviesZone.css";
 import { useState, useEffect } from "react";
-import RateFilter from "../Components/RateFilter";
-import add from '../RS/add.svg'
+/* import RateFilter from "../Components/RateFilter";
+ */
+import { FaPlus } from "react-icons/fa";
+import StarRate from "./StarRate";
 
 function MoviesZone({
     filter,
@@ -13,7 +15,7 @@ function MoviesZone({
     rateFilter,
     setRateFilter,
     movies,
-    updateAdd
+    updateAdd,
 }) {
     /*  const categories = movieList.reduce(
         (arr, movie) =>
@@ -30,6 +32,8 @@ function MoviesZone({
         .sort(); */
 
     const [filteredMovies, setFilteredMovies] = useState([]);
+    const [rating, setRating] = useState(null);
+    const [hover, setHover] = useState(null);
     useEffect(() => {
         setFilteredMovies(
             movies.filter((movie) =>
@@ -40,7 +44,13 @@ function MoviesZone({
 
     return (
         <div className="tb-zone">
-            <RateFilter rateFilter={rateFilter} setRateFilter={setRateFilter} />
+            <StarRate
+                rating={rating}
+                setRating={setRating}
+                hover={hover}
+                setHover={setHover}
+            />
+            {/* <RateFilter rateFilter={rateFilter} setRateFilter={setRateFilter} /> */}
             {/*   <Categories
                 categories={categories}
                 filter={filter}
@@ -50,8 +60,7 @@ function MoviesZone({
             <ul className="tb-zone-movies">
                 {filteredMovies.map(
                     ({ id, title, category, rate, cover, cast, release }) =>
-                        !Number.parseInt(rateFilter) ||
-                        Number.parseInt(rateFilter) <= rate ? (
+                        !rating || rating === rate ? (
                             <div key={id}>
                                 <MovieItem
                                     title={title}
@@ -69,7 +78,7 @@ function MoviesZone({
                         className="tb-baner-add-btn"
                         onClick={() => updateAdd(false)}
                     >
-                        <img src={add} alt="addButton" width="200px" />
+                        <FaPlus size={100} color={"red"} />
                     </button>
                 </div>
             </ul>

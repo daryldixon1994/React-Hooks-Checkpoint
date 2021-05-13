@@ -2,7 +2,7 @@ import Banner from "./Banner";
 import MoviesZone from "./MoviesZone";
 import { useState } from "react";
 import AddMovie from "./AddMovie";
-import {movieList} from '../datas/movieList'
+import { movieList } from "../datas/movieList";
 
 function App() {
     const [filter, setFilter] = useState("");
