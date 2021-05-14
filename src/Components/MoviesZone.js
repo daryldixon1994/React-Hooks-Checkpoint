@@ -36,8 +36,8 @@ function MoviesZone({
     const [hover, setHover] = useState(null);
     useEffect(() => {
         setFilteredMovies(
-            movies.filter((movie) =>
-                movie.title.toLowerCase().includes(search.toLowerCase())
+            movies.filter((elt) =>
+                elt.title.toLowerCase().includes(search.toLowerCase())
             )
         );
     }, [search, movies]);
