@@ -20,8 +20,6 @@ function App() {
     return (
         <div className="App">
             <Banner
-                add={add}
-                updateAdd={updateAdd}
                 updateSearch={updateSearch}
             />
             {add ? null : (
